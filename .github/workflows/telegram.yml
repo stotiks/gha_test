@@ -35,7 +35,7 @@ jobs:
       - name: Upload download_url.txt
         uses: actions/upload-artifact@v3
         with:
-          name: download_url.txt
+          name: download_url
           path: download_url.txt
     
   notify:
@@ -46,7 +46,7 @@ jobs:
       - name: Download download_url.txt
         uses: actions/download-artifact@v3
         with:
-          name: homework
+          name: download_url
       - shell: bash
         run: |
           value=`cat download_url.txt`
