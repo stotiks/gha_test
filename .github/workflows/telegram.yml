@@ -70,6 +70,10 @@ jobs:
           message: |
             New *MMX Node* release *${{ steps.get_version.outputs.VERSION }}*       
             [Download](${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }})
-            [GitHub](${{ github.event.repository.url }})
+            [Telegram channel](https://t.me/mmx_node)
+            [Telegram chat](https://t.me/mmx_node_chat)
+            [Telegram chat[RU]](https://t.me/mmx_node_chat_ru)
+            [Discord](https://discord.gg/tCwevssVmY)
+            
             
             
