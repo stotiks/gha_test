@@ -63,6 +63,5 @@ jobs:
           message: |
             New *MMX Node* release *${{ github.event.release.tag_name }}*
             [Download](${{ env.DOWNLOAD_URL }})
-            ${{ env.DOWNLOAD_URL }}
             
             
