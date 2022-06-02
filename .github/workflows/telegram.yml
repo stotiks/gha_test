@@ -9,11 +9,19 @@ jobs:
   msvc:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: "recursive"
+    
+  telegram:
+    runs-on: ubuntu-latest
+    needs: [msvc]
+    steps:
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.MMX_TELEGRAM_TO }}
+          token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} created commit:
             Commit message: ${{ github.event.commits[0].message }}
