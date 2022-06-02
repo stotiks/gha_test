@@ -46,8 +46,9 @@ jobs:
           token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
           format: html
           message: |
-            New *MMX Node* release *${{ steps.get_version.outputs.VERSION }}*       
+            MMX Node release ${{ steps.get_version.outputs.VERSION }}      
             ${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }}
+            
             <a href="https://t.me/mmx_node">Telegram channel</a>
             <a href="https://t.me/mmx_node_chat">Telegram chat</a>
             <a href="https://t.me/mmx_node_chat_ru">Telegram chat[RU]</a>
