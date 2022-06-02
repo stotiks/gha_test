@@ -69,12 +69,11 @@ jobs:
           format: html
           message: |
             New *MMX Node* release *${{ steps.get_version.outputs.VERSION }}*       
-            [Download](${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }})
-            [Telegram channel](https://t.me/mmx_node)
-            [Telegram chat](https://t.me/mmx_node_chat)
-            [Telegram chat[RU]](https://t.me/mmx_node_chat_ru)
-            [Discord](https://discord.gg/tCwevssVmY)
-            <a href="https://t.me/mmx_node">qwe</a>
+            ${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }}
+            <a href="https://t.me/mmx_node">Telegram channel</a>
+            <a href="https://t.me/mmx_node_chat">Telegram chat</a>
+            <a href="https://t.me/mmx_node_chat_ru">Telegram chat[RU]</a>
+            <a href="https://discord.gg/tCwevssVmY">Discord</a>
             
             
             
