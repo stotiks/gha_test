@@ -29,8 +29,9 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
       - name: Save upload url
+        run: echo "${{ steps.attach_to_release.outputs.browser_download_url }}"
         env:
-          browser_download_url: ${{ steps.attach_to_release.outputs.browser_download_url }}   
+          browser_download_url: ${{ steps.attach_to_release.outputs.browser_download_url }}
     
   notify:
     # if: startsWith(github.ref, 'refs/tags/v')
