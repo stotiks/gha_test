@@ -66,14 +66,15 @@ jobs:
         with:
           to: ${{ secrets.MMX_TELEGRAM_TO_1 }}
           token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
-          format: markdown
+          format: html
           message: |
             New *MMX Node* release *${{ steps.get_version.outputs.VERSION }}*       
             [Download](${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }})
             [Telegram channel](https://t.me/mmx_node)
             [Telegram chat](https://t.me/mmx_node_chat)
             [Telegram chat[RU]](https://t.me/mmx_node_chat_ru)
-            [Discord](https://discord.gg/tCwevssVmY)
+            [Discord](https://discord.gg/tCwevssVmY
+            <a href=https://t.me/mmx_node>qwe</a>
             
             
             
