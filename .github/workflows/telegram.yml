@@ -68,6 +68,8 @@ jobs:
           token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
           format: markdown
           message: |
-            ${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }}
+            New *MMX Node* release *${{ steps.get_version.outputs.VERSION }}*       
+            [Download](${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }})
+            [GitHub](${{ github.event.repository.url }})
             
             
