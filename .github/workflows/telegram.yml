@@ -7,7 +7,7 @@ on:
       
 jobs:
   msvc:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -20,7 +20,7 @@ jobs:
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.MMX_TELEGRAM_TO }}
+          to: ${{ secrets.MMX_TELEGRAM_TO_1 }}
           token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} created commit:
