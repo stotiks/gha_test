@@ -38,7 +38,7 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
         
-      - name: send telegram message
+      - name: Telegram notification
         if: "${{ env.MMX_TELEGRAM_TO_1 != '' }}"
         uses: appleboy/telegram-action@master
         with:
