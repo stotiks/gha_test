@@ -43,7 +43,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.MMX_TELEGRAM_TO_1 }}
-          token: ${{ secrets.MMX_BOT_TELEGRAM_TOKEN }}
+          token: ${{ secrets.MMX_TELEGRAM_TOKEN }}
           format: html
           message: |
             MMX Node release ${{ steps.get_version.outputs.VERSION }}      
@@ -53,6 +53,16 @@ jobs:
             <a href="https://t.me/mmx_node_chat">Telegram chat</a>
             <a href="https://t.me/mmx_node_chat_ru">Telegram chat[RU]</a>
             <a href="https://discord.gg/tCwevssVmY">Discord</a>
+            - name: Discord notification
+            
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.MMX_DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            MMX Node release ${{ steps.get_version.outputs.VERSION }}      
+            ${{ github.event.repository.url }}/releases/${{ steps.get_version.outputs.VERSION }}
             
             
             
