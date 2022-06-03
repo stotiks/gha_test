@@ -53,7 +53,6 @@ jobs:
             <a href="https://t.me/mmx_node_chat">Telegram chat</a>
             <a href="https://t.me/mmx_node_chat_ru">Telegram chat[RU]</a>
             <a href="https://discord.gg/tCwevssVmY">Discord</a>
-            - name: Discord notification
             
       - name: Discord notification
         env:
